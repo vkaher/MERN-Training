@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: antiquewhite;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+        }
+        .list-items li{
+            margin-bottom: 7px;
+        }
+        .list-items ul{
+            margin-top: 10px;
+        }
+        .title{
+            margin-top: 10px;
+        }
+        .experience{
+            border: 3px solid #000;
+            width: 80%;
+        }
+        .experience th{
+            background-color: #a9a964;
+            border-right: 1px solid #fff;
+            padding: 10px;
+            text-align: left;
+        }
+        .experience td{
+            border: 1px solid #fff;
+            padding: 10px;
+        }
+        
+        .technology{
+            border: 3px solid #000;
+            width: 80%;
+        }
+        .technology th{
+            background-color: #a9a964;
+            border-right: 1px solid #fff;
+            padding: 10px;
+            text-align: left;
+        }
+        .technology td{
+            border: 1px solid #fff;
+            padding: 10px;
+        }
+        .technology td:first-child{
+            background-color: #a9a964;
+        }
+        .link{
+            color: rgb(101, 112, 236);
+        }
+        .form-title{
+            margin: 20px 0;
+            font-size: 24px;
+        }
+        .form-sec{
+            width: 400px;
+            margin-bottom: 10px;
+        }
+        .form-sec label{
+            width: 100%;
+            display: block;
+        }
+        .form-sec input{
+            width: 100%;
+        }
+        .form-sec textarea{
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="form-title">Submit the form below to contact me</h2>
+        <div class="form-wrap">
+            <form class="contact-form">
+                <div class="form-sec">
+                    <label>Name:</label>
+                    <input name="Name" type="text"/>
+                </div>
+                <div class="form-sec">
+                    <label>Message:</label>
+                    <textarea name="Message" cols="10" rows="5"></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+body{
+    background-color: antiquewhite;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+.card{
+    box-sizing: border-box;
+}
+img{
+    width: 100%!important;
+    height: 100%!important;
+}
+nav.navbar{
+    background: #ae5b00;
+}
+.navbar-brand{
+    color: #fff;
+}
+.nav-link, .nav-link:hover{
+    color: #fff;
+}
+.nav-link:hover{
+    text-decoration: underline;
+}
+.data-area div{
+    min-height: 250px;
+}
