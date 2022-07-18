@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <style>
+        .img-wrap{
+            max-width: 230px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Company Name</th>
+                    <th>Comapny Logo</th>
+                    <th>About Company</th>
+                </tr>
+            </thead>
+            <tbody id="infoTable">
+                <tr id="dataTable" scope="row">
+                    
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Scripts starts here -->
+    <script>
+       
+        fetch('companyData.json')
+            .then(function(res){
+                return res.json();
+            })
+            .then(function(data){
+                console.log(data);
+
+            function buildTable(str){
+                var table = document.getElementById('infoTable'); 
+
+                for(var i=0; i<str.length; i++){
+                var tableRow = `<tr scope="row">
+                    <td>${str[i].company_name}</td>
+                    <td><img class="img-wrap" src="${str[i].img_src}"></td>
+                    <td>${str[i].about}</td>
+                    </tr>`
+                    table.innerHTML += tableRow
+                }
+                
+            }   
+            buildTable(data);
+
+
+
+            })
+        //console.log(data);
+    </script>
+</body>
+</html>
