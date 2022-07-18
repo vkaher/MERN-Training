@@ -1,0 +1,2 @@
+let obj = '{"options" : [{"city":"tokyo","color":"yellow"},{"city":"japan","color":"pink"},{"city":"delhi","color":"red"},{"city":"manhattan","color":"orange"},{"city":"paris","color":"cyan"}]}'
+let parsedObj = JSON.parse(obj);
