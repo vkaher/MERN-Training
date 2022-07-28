@@ -2,17 +2,15 @@ function weather() {
 
     let req = new XMLHttpRequest();
     let city = document.getElementById('locationText').value;
-    let url=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=93f26e3c57081a6210de53b8dcfdfea4`
-    req.open('GET',url,true);
+    req.open('GET',`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=93f26e3c57081a6210de53b8dcfdfea4`);
 
     
 
     //Request on load
-    req.onload = function(){
-        //document.getElementById('tableData').style.display == none;
+    req.onload = () => {
         if(req.status>=200 && req.status <400){
             let data = JSON.parse(req.responseText);
-            console.log(data);
+            //console.log(data);
             let ctemp = data.main.temp-273.15;
             document.getElementById('temp').textContent = Math.floor(ctemp);
             document.getElementById('city').textContent = data.name;
@@ -58,3 +56,5 @@ function weather() {
 
     
 };
+
+weather();
