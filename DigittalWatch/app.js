@@ -9,7 +9,7 @@ const renderThis = () => {
  </div>`;
  jsDiv.innerHTML = str;
 }
-renderThis();
+setInterval(renderThis, 1000);
 
  let DivToRender = React.createElement(
     "div",null,
